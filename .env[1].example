@@ -1,0 +1,17 @@
+# Supabase (server-side only)
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# Resend (server-side only)
+RESEND_API_KEY=
+MAIL_FROM=
+
+# Admin import protection (long random value; configure privately in Netlify)
+ADMIN_IMPORT_TOKEN=
+
+# Payments stay in demo mode until the adult account holder completes Wave setup
+PAYMENTS_MODE=demo
+WAVE_API_BASE=https://api.wave.com
+WAVE_API_KEY=
+WAVE_WEBHOOK_SECRET=
+SITE_URL=

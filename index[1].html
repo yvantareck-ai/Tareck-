@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DIGIT STORE — Boutique de produits numériques">
+  <title>DIGIT STORE</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">DIGIT<span>STORE</span></a>
+    <nav><a href="#catalogue">Boutique</a><a href="#fonctionnement">Comment ça marche</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LA BOUTIQUE DU NUMÉRIQUE</p>
+      <h1>Vos codes numériques,<br><span>simplement.</span></h1>
+      <p>Choisissez un produit, renseignez votre adresse e-mail et suivez les instructions de paiement.</p>
+      <a class="primary" href="#catalogue">Voir la boutique</a>
+      <p class="notice">Version de démonstration : aucun paiement réel n'est activé.</p>
+    </section>
+    <section id="catalogue">
+      <div class="section-head"><div><p class="eyebrow">CATALOGUE</p><h2>Nos produits</h2></div><p id="status">Chargement…</p></div>
+      <div id="products" class="products"></div>
+    </section>
+    <section id="fonctionnement" class="how">
+      <h2>Comment ça marche ?</h2>
+      <ol><li>Choisissez votre produit.</li><li>Indiquez une adresse e-mail valide.</li><li>Suivez le parcours de paiement proposé.</li><li>Après confirmation vérifiée, le code est envoyé par e-mail.</li></ol>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> DIGIT STORE</footer>
+  <dialog id="orderDialog">
+    <form id="orderForm" method="dialog">
+      <button class="close" value="cancel" aria-label="Fermer">×</button>
+      <p class="eyebrow">COMMANDE</p><h2 id="selectedName">Produit</h2>
+      <label for="email">Votre adresse e-mail</label>
+      <input id="email" type="email" required maxlength="254" placeholder="vous@gmail.com">
+      <input id="sku" type="hidden">
+      <p id="orderMessage" class="notice">Le paiement réel n'est pas encore activé.</p>
+      <button class="primary" id="payButton" value="default">Continuer</button>
+    </form>
+  </dialog>
+  <script src="/script.js" defer></script>
+</body>
+</html>
