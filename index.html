@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DIGIT STORE — boutique de jeux numériques.">
+  <title>DIGIT STORE — Boutique gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">BIENVENUE CHEZ DIGIT STORE <span>✦</span> VOTRE UNIVERS GAMING</div>
+  <header class="header">
+    <a class="brand" href="#"><span class="brand-mark">D</span><span>DIGIT<span class="purple"> STORE</span><small>YOUR DIGITAL GAMING STORE</small></span></a>
+    <nav><a href="#accueil">Accueil</a><a href="#catalogue">Boutique</a><a href="#apropos">À propos</a></nav>
+    <button class="cart-button" id="open-cart" aria-label="Ouvrir le panier">Panier <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <p class="eyebrow">✦ LE GAMING, EN VERSION DIGITALE</p>
+        <h1>TON PROCHAIN<br>UNIVERS <span class="gradient-text">T'ATTEND.</span></h1>
+        <p class="hero-copy">Explore notre sélection de jeux numériques pour PC, PlayStation, Xbox et mobile.</p>
+        <a class="primary-button" href="#catalogue">Explorer la boutique <span>→</span></a>
+        <div class="hero-note"><span class="status-dot"></span> Catalogue de démonstration — produits à confirmer</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration gaming abstraite">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="game-tile tile-back">DS<span>✦</span></div>
+        <div class="game-tile tile-front"><span class="tile-kicker">DIGITAL EDITION</span><strong>LEVEL<br>UP.</strong><span class="tile-bottom">DIGIT STORE / 2026</span></div>
+        <div class="floating-chip">GAME ON ✦</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>◈</span><p><strong>Univers gaming</strong><small>Plusieurs plateformes</small></p></div>
+      <div><span>⌕</span><p><strong>Recherche simple</strong><small>Trouve ton prochain jeu</small></p></div>
+      <div><span>▣</span><p><strong>Panier pratique</strong><small>Prépare ta sélection</small></p></div>
+    </section>
+
+    <section class="catalog section" id="catalogue">
+      <div class="section-heading"><div><p class="eyebrow">✦ FAIS TON CHOIX</p><h2>La boutique <span class="purple">DIGIT</span></h2></div><span class="demo-label">PRODUITS EXEMPLES</span></div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Rechercher un jeu..." aria-label="Rechercher un jeu">
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="Tous">Tous</button>
+          <button class="filter" data-filter="PC">PC</button>
+          <button class="filter" data-filter="PlayStation">PlayStation</button>
+          <button class="filter" data-filter="Xbox">Xbox</button>
+          <button class="filter" data-filter="Mobile">Mobile</button>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+      <p class="empty hidden" id="empty">Aucun jeu trouvé. Essaie une autre recherche.</p>
+    </section>
+
+    <section class="about section" id="apropos">
+      <div><p class="eyebrow">✦ À PROPOS</p><h2>Le jeu commence<br><span class="purple">ici.</span></h2></div>
+      <p>DIGIT STORE est un projet de boutique gaming numérique. Les articles affichés actuellement sont des exemples pour tester le site. Avant toute vente, remplace-les par des offres que tu es autorisé à distribuer et indique clairement la plateforme, la région et les conditions d'utilisation.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">D</span><span>DIGIT<span class="purple"> STORE</span><small>YOUR DIGITAL GAMING STORE</small></span></a><p>© 2026 DIGIT STORE. Projet de démonstration.</p></footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Panier">
+    <div class="cart-heading"><div><p class="eyebrow">✦ TA SÉLECTION</p><h2>Mon panier</h2></div><button class="icon-button" id="close-cart" aria-label="Fermer">✕</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty">Ton panier est vide.</p></div>
+    <div class="cart-bottom"><div class="total"><span>Total estimé</span><strong id="cart-total">0 FCFA</strong></div><button class="primary-button checkout" id="checkout">Continuer <span>→</span></button><small>Démo uniquement : aucun paiement n'est effectué.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
